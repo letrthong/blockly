@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://unpkg.com/google-blockly@1.0.0/blockly_compressed.js"></script>
+  <script src="https://unpkg.com/google-blockly@1.0.0/javascript_compressed.js"></script>
+  <script src="https://unpkg.com/google-blockly@1.0.0/blocks_compressed.js"></script>
+  <script src="https://unpkg.com/google-blockly@1.0.0/msg/js/en.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container py-5">
+
+    <h1 class="text-center">Blockly Test</h1>
+
+    <div class="row my-3">
+      <div class="col">
+        <div id="blocklyDiv" class="blockly-container"></div>
+      </div>
+    </div>
+
+    <div class="row my-3">
+      <div class="col-md-8">
+        <h2>Output</h2>
+        <p id="code"></p>
+      </div>
+      <div class="col-md">
+        <button type="button" class="btn btn-success" onclick="saveWorkspace();">Save</button>
+        <button type="button" class="btn btn-info" onclick="restoreWorkspace();">Restore</button>
+        <button type="button" class="btn btn-danger" onclick="deleteWorkspace();">Delete</button>
+      </div>
+    </div>
+
+  </div>
+
+  <xml id="toolbox" style="display: none">
+    <category name="Variables" custom="VARIABLE" colour="330"></category>
+    <category name="Functions" custom="PROCEDURE" colour="330"></category>
+    <category name="Logic" colour="210">
+      <block type="controls_if"></block>
+      <block type="logic_compare"></block>
+      <block type="logic_operation"></block>
+      <block type="logic_boolean"></block>
+    </category>
+    <category name="Loops" colour="120">
+      <block type="controls_whileUntil"></block>
+      <block type="controls_repeat_ext"></block>
+      <block type="controls_for"></block>
+    </category>
+    <category name="Math" colour="230">
+      <block type="math_number"></block>
+      <block type="math_arithmetic"></block>
+    </category>
+    <category name="Functions" colour="290" custom="PROCEDURE"></category>
+    <category name="Text" colour="150">
+      <block type="text"></block>
+      <block type="text_print"></block>
+    </category>
+    <category name="Electricity" colour="300">
+      <block type="power_type"></block>
+    </category>
+    <category name="Conversions" colour="360">
+      <block type="f_to_c"></block>
+    </category>
+  </xml>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <script src="custom-blocks.js"></script>
+
+</body>
+
+</html>
